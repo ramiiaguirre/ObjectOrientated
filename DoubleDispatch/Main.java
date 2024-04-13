@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Jugable jugadorUno = new Papel();
+		Jugable jugadorUno = new Spock();
 		Jugable jugadorDos = new Tijera();
 		
 		Resultado resultado = jugadorUno.jugar(jugadorDos);

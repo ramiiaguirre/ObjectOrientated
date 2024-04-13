@@ -1,13 +1,23 @@
 package ej2;
 
-public interface Jugable {
+public abstract class Jugable {
 	
-	public Resultado jugar(Jugable jugable);	
+	public abstract Resultado jugar(Jugable jugable);	
 	
-	Resultado jugarContra(Piedra jugada);
-	Resultado jugarContra(Papel jugada);
-	Resultado jugarContra(Tijera jugada);
-	Resultado jugarContra(Lagarto jugada);
-	Resultado jugarContra(Spock jugada);
+	Resultado jugarContra(Piedra jugada) {
+		return Resultado.DERROTA;
+	}
+	Resultado jugarContra(Papel jugada) {
+		return Resultado.DERROTA;
+	}
+	Resultado jugarContra(Tijera jugada) {
+		return Resultado.DERROTA;
+	}
+	Resultado jugarContra(Lagarto jugada) {
+		return Resultado.DERROTA;
+	}
+	Resultado jugarContra(Spock jugada) {
+		return Resultado.DERROTA;
+	}
 	
 }

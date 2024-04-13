@@ -1,6 +1,6 @@
 package ej2;
 
-public class Spock implements Jugable {
+public class Spock extends Jugable {
 
 	 @Override
 	public Resultado jugar(Jugable jugada) {
@@ -13,25 +13,13 @@ public class Spock implements Jugable {
 	}
 
 	@Override
-	public Resultado jugarContra(Papel jugada) {
-		return Resultado.DERROTA;
-	}
-
-	@Override
 	public Resultado jugarContra(Tijera jugada) {
 		return Resultado.VICTORIA;
 	}
 
 	@Override
-	public Resultado jugarContra(Lagarto jugada) {
-		return Resultado.DERROTA;
-	}
-
-	@Override
 	public Resultado jugarContra(Spock jugada) {
 		return Resultado.EMPATE;
-	}
-
-	
+	}	
 
 }
