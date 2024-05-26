@@ -1,36 +1,49 @@
 package ej22;
 
 public class Sanguche {
-	private Ingrediente pan;
-	private Ingrediente aderezo;
-	private Ingrediente principal;
-	private Ingrediente adicional;
+	private IngredienteContent pan;
+	private IngredienteContent aderezo;
+	private IngredienteContent principal;
+	private IngredienteContent adicional;
 	
-	public Ingrediente getPan() {
-		return pan;
+	public Sanguche() {
+		this.pan = new IngredienteVacio();
+		this.aderezo = new IngredienteVacio();
+		this.principal = new IngredienteVacio();
+		this.adicional = new IngredienteVacio();
 	}
-	public void setPan(Ingrediente pan) {
+	
+	public IngredienteContent getPan() {
+		return this.pan;
+	}
+	public void setPan(IngredienteContent pan) {
 		this.pan = pan;
 	}
-	public Ingrediente getAderezo() {
-		return aderezo;
+	public IngredienteContent getAderezo() {
+		return this.aderezo;
 	}
-	public void setAderezo(Ingrediente aderezo) {
+	public void setAderezo(IngredienteContent aderezo) {
 		this.aderezo = aderezo;
 	}
-	public Ingrediente getPrincipal() {
-		return principal;
+	public IngredienteContent getPrincipal() {
+		return this.principal;
 	}
-	public void setPrincipal(Ingrediente principal) {
+	public void setPrincipal(IngredienteContent principal) {
 		this.principal = principal;
 	}
-	public Ingrediente getAdicional() {
-		return adicional;
+	public IngredienteContent getAdicional() {
+		return this.adicional;
 	}
-	public void setAdicional(Ingrediente adicional) {
+	public void setAdicional(IngredienteContent adicional) {
 		this.adicional = adicional;
 	}
 	
+	public double calcularPrecio() {
+		return pan.getPrecio() + principal.getPrecio() +
+				aderezo.getPrecio() + adicional.getPrecio();
+	}
+	
+	/*
 	public double calcularPrecio() {
 		double valor = pan.getPrecio() + principal.getPrecio();
 		if (aderezo != null) {
@@ -41,7 +54,7 @@ public class Sanguche {
 		}
 		return valor;
 	}
-	
+	*/
 	
 
 }

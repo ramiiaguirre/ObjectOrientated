@@ -1,6 +1,6 @@
 package ej22;
 
-public class Ingrediente {
+public class Ingrediente implements IngredienteContent {
 	private String nombre;
 	private double precio;
 	
